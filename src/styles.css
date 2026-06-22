@@ -1,0 +1,140 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-cream: var(--cream);
+  --color-leaf: var(--leaf);
+  --color-forest: var(--forest);
+
+  --shadow-soft: 0 10px 40px -12px color-mix(in oklab, var(--forest) 22%, transparent);
+  --shadow-card: 0 4px 24px -10px color-mix(in oklab, var(--forest) 18%, transparent);
+  --gradient-hero: linear-gradient(135deg, var(--forest) 0%, var(--primary) 55%, var(--leaf) 100%);
+  --gradient-band: linear-gradient(180deg, color-mix(in oklab, var(--cream) 70%, white) 0%, var(--background) 100%);
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Brand greens drawn from logo */
+  --cream: oklch(0.953 0.038 90);          /* #F5EBD0 */
+  --primary: oklch(0.42 0.105 162);        /* #0B5D3B */
+  --leaf: oklch(0.59 0.135 159);           /* #1F8A5C */
+  --forest: oklch(0.30 0.075 162);         /* #0E3A26 */
+
+  --background: oklch(0.995 0.004 95);
+  --foreground: oklch(0.20 0.04 160);
+
+  --card: oklch(1 0 0);
+  --card-foreground: var(--foreground);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--foreground);
+
+  --primary-foreground: var(--cream);
+
+  --secondary: var(--cream);
+  --secondary-foreground: var(--forest);
+
+  --muted: oklch(0.96 0.012 130);
+  --muted-foreground: oklch(0.42 0.025 160);
+
+  --accent: oklch(0.93 0.05 150);
+  --accent-foreground: var(--forest);
+
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(0.90 0.02 150);
+  --input: oklch(0.92 0.018 150);
+  --ring: var(--leaf);
+}
+
+.dark {
+  --background: oklch(0.18 0.03 160);
+  --foreground: var(--cream);
+  --card: oklch(0.22 0.035 160);
+  --card-foreground: var(--cream);
+  --popover: oklch(0.22 0.035 160);
+  --popover-foreground: var(--cream);
+  --primary: var(--leaf);
+  --primary-foreground: var(--forest);
+  --secondary: oklch(0.28 0.04 160);
+  --secondary-foreground: var(--cream);
+  --muted: oklch(0.26 0.03 160);
+  --muted-foreground: oklch(0.75 0.02 150);
+  --accent: oklch(0.30 0.06 155);
+  --accent-foreground: var(--cream);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: var(--leaf);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility container-x {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  max-width: 76rem;
+}
+
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+@utility section-pad {
+  padding-block: 5rem;
+}
