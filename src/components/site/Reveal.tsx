@@ -54,7 +54,7 @@ export function Reveal<T extends ElementType = "div">({
       ref={ref}
       style={{ ...style, animationDelay: visible ? `${delay}ms` : undefined }}
       className={cn(
-        "duration-700 ease-out",
+        "duration-[3000ms] ease-out",
         visible ? cn("animate-in fade-in-0", directionClass[direction]) : "opacity-0",
         className,
       )}
