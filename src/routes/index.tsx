@@ -3,7 +3,7 @@ import { ArrowRight, HeartPulse, Users, Sparkles, ShieldCheck, GraduationCap, Ac
 import { SiteShell } from "@/components/site/SiteShell";
 import { Reveal } from "@/components/site/Reveal";
 import brand from "@/assets/ihsri-brand.jpeg.asset.json";
-import heroImg from "@/assets/hero-rehab.jpg";
+import heroImg from "@/assets/hero-section.jpg";
 import event01 from "@/assets/gallery/gallery-02.jpeg";
 import event02 from "@/assets/gallery/gallery-06.jpeg";
 import event03 from "@/assets/gallery/gallery-10.jpeg";
