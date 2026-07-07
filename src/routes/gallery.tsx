@@ -37,12 +37,12 @@ import g30 from "@/assets/gallery/gallery-30.jpeg";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Event Gallery — IHSRI" },
+      { title: "Event Gallery - IHESRI" },
       {
         name: "description",
-        content: "Photos from IHSRI's events, outreach and community programs.",
+        content: "Photos from IHESRI's events, outreach and community programs.",
       },
-      { property: "og:title", content: "IHSRI Event Gallery" },
+      { property: "og:title", content: "IHESRI Event Gallery" },
       {
         property: "og:description",
         content: "Moments from our rehabilitation outreach, training and community events.",
@@ -56,7 +56,7 @@ const photos = [
   g01, g02, g03, g04, g05, g06, g07, g08, g09, g10,
   g11, g12, g13, g14, g15, g16, g17, g18, g19, g20,
   g21, g22, g23, g24, g25, g26, g27, g28, g29, g30,
-].map((src, i) => ({ src, alt: `IHSRI event photo ${i + 1}` }));
+].map((src, i) => ({ src, alt: `IHESRI event photo ${i + 1}` }));
 
 function GalleryPage() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -87,7 +87,7 @@ function GalleryPage() {
             Moments from our work in the field.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            A look at IHSRI's outreach, training sessions and community events —
+            A look at IHESRI's outreach, training sessions and community events —
             rehabilitation in action.
           </p>
         </Reveal>

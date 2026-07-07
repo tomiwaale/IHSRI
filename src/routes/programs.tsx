@@ -1,18 +1,32 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site/SiteShell";
 import { Reveal } from "@/components/site/Reveal";
-import { ArrowRight } from "lucide-react";
-import physio from "@/assets/program-physio.jpg";
-import assistive from "@/assets/program-assistive.jpg";
-import training from "@/assets/program-training.jpg";
+import {
+  ArrowRight,
+  GraduationCap,
+  HeartPulse,
+  Megaphone,
+  School,
+  ShieldCheck,
+  Sprout,
+  Users,
+} from "lucide-react";
 
 export const Route = createFileRoute("/programs")({
   head: () => ({
     meta: [
-      { title: "Programs — IHSRI" },
-      { name: "description", content: "Integrated rehabilitation, assistive technology access, community-based services and workforce development programs from IHSRI." },
-      { property: "og:title", content: "IHSRI Programs" },
-      { property: "og:description", content: "Our integrated rehabilitation programs across health systems, assistive technology and workforce development." },
+      { title: "Programs - IHESRI" },
+      {
+        name: "description",
+        content:
+          "Explore IHESRI programs in community rehabilitation, school health, disability awareness, physiotherapy outreach, inclusive community projects, health systems strengthening, leadership development and volunteer training.",
+      },
+      { property: "og:title", content: "IHESRI Programs" },
+      {
+        property: "og:description",
+        content:
+          "Programs that strengthen rehabilitation, disability inclusion and community health.",
+      },
     ],
   }),
   component: ProgramsPage,
@@ -20,25 +34,44 @@ export const Route = createFileRoute("/programs")({
 
 const programs = [
   {
-    img: physio,
-    tag: "Health Systems",
-    title: "Rehabilitation in Primary Care",
-    body: "We embed assessment, therapy and referral pathways into primary health facilities so people get rehabilitation early — before disability deepens.",
-    points: ["Clinical protocols", "Referral pathways", "Outcome measurement"],
+    Icon: HeartPulse,
+    title: "Community Rehabilitation",
+    body: "Bringing rehabilitation education, prevention and support closer to the people who need it.",
   },
   {
-    img: assistive,
-    tag: "Assistive Technology",
-    title: "Equitable Access to Devices",
-    body: "From wheelchairs to prosthetics and low-vision aids, we work with local providers to make assistive technology affordable, appropriate and well-fitted.",
-    points: ["Local provisioning", "Fitting & follow-up", "Repair networks"],
+    Icon: School,
+    title: "School Health Programs",
+    body: "Supporting healthier school communities through education, screening and early awareness.",
   },
   {
-    img: training,
-    tag: "Workforce",
-    title: "Training the Next Generation",
-    body: "We mentor students and upskill practicing professionals through structured curricula, clinical placements and continuing education.",
-    points: ["University partnerships", "Clinical mentorship", "CPD programs"],
+    Icon: Megaphone,
+    title: "Disability Awareness Campaigns",
+    body: "Promoting inclusion, dignity and equal opportunity for people with disabilities.",
+  },
+  {
+    Icon: ShieldCheck,
+    title: "Physiotherapy Outreach",
+    body: "Taking practical physiotherapy education and preventive health services into communities.",
+  },
+  {
+    Icon: Users,
+    title: "Inclusive Community Projects",
+    body: "Creating community spaces and systems where everyone can participate fully.",
+  },
+  {
+    Icon: Sprout,
+    title: "Health Systems Strengthening",
+    body: "Advancing rehabilitation as a fundamental part of primary healthcare and community development.",
+  },
+  {
+    Icon: GraduationCap,
+    title: "Leadership Development",
+    body: "Developing the next generation of rehabilitation and community health leaders.",
+  },
+  {
+    Icon: Users,
+    title: "Volunteer Academy",
+    body: "Mentoring students and volunteers for service, innovation and community impact.",
   },
 ];
 
@@ -49,47 +82,52 @@ function ProgramsPage() {
         <Reveal className="container-x py-20 md:py-28">
           <span className="eyebrow">Our programs</span>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.05] text-foreground md:text-6xl">
-            Integrated rehabilitation, end to end.
+            Programs that strengthen systems and transform lives.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Each program is designed to interlock with the next — strengthening systems,
-            expanding access, and developing the people who deliver care.
+            IHESRI works across community rehabilitation, school health, disability
+            inclusion, physiotherapy outreach, health systems strengthening and leadership
+            development.
           </p>
         </Reveal>
       </section>
 
       <section className="section-pad">
-        <div className="container-x space-y-20">
-          {programs.map((p, i) => (
-            <Reveal
-              key={p.title}
-              as="article"
-              direction={i % 2 === 1 ? "right" : "left"}
-              className={`grid items-center gap-10 md:grid-cols-2 ${i % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""}`}
-            >
-              <div className="overflow-hidden rounded-3xl border border-border shadow-card">
-                <img src={p.img} alt={p.title} width={1200} height={900} loading="lazy" className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105" />
-              </div>
+        <div className="container-x">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {programs.map(({ Icon, title, body }, i) => (
+              <Reveal
+                key={title}
+                delay={(i % 4) * 80}
+                className="group rounded-2xl border border-border bg-card p-6 shadow-card transition hover:-translate-y-1"
+              >
+                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent text-forest transition-transform duration-300 group-hover:scale-110">
+                  <Icon size={20} />
+                </div>
+                <h2 className="mt-5 font-display text-lg font-semibold text-foreground">
+                  {title}
+                </h2>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{body}</p>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal className="mt-12 rounded-3xl bg-forest px-8 py-12 text-cream md:px-12">
+            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div>
-                <span className="eyebrow">{p.tag}</span>
-                <h2 className="mt-3 font-display text-3xl font-semibold text-foreground md:text-4xl">{p.title}</h2>
-                <p className="mt-4 text-muted-foreground">{p.body}</p>
-                <ul className="mt-6 grid gap-2 text-sm text-foreground">
-                  {p.points.map((pt) => (
-                    <li key={pt} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-primary" /> {pt}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  to="/contact"
-                  className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-all hover:gap-3"
-                >
-                  Partner on this program <ArrowRight size={16} />
-                </Link>
+                <span className="eyebrow !text-cream/80">Partner with IHESRI</span>
+                <h2 className="mt-3 max-w-2xl font-display text-3xl font-semibold md:text-4xl">
+                  Help expand rehabilitation access in more communities.
+                </h2>
               </div>
-            </Reveal>
-          ))}
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-cream px-6 py-3 text-sm font-semibold text-forest transition-transform hover:-translate-y-0.5"
+              >
+                Contact us <ArrowRight size={16} />
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
     </SiteShell>

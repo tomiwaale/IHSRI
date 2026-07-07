@@ -21,13 +21,13 @@ export function Header() {
         <Link to="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
           <img
             src={brand.url}
-            alt="IHSRI logo"
+            alt="IHESRI logo"
             className="h-10 w-10 rounded-full object-cover ring-1 ring-border transition-transform duration-300 group-hover:scale-105"
             width={40}
             height={40}
           />
           <div className="leading-tight">
-            <div className="font-display text-sm font-semibold text-foreground">IHSRI</div>
+            <div className="font-display text-sm font-semibold text-foreground">IHESRI</div>
             <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
               Health · Rehabilitation
             </div>

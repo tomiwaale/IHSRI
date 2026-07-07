@@ -21,10 +21,10 @@ export const Route = createFileRoute("/donate/")({
   validateSearch: searchSchema,
   head: () => ({
     meta: [
-      { title: "Donate — IHSRI" },
+      { title: "Donate - IHESRI" },
       {
         name: "description",
-        content: "Make a secure donation to IHSRI via Paystack — cards, bank transfer, and USSD accepted.",
+        content: "Make a secure donation to IHESRI via Paystack - cards, bank transfer, and USSD accepted.",
       },
     ],
   }),
@@ -70,11 +70,11 @@ function DonatePage() {
         <Reveal className="container-x py-20 md:py-28">
           <span className="eyebrow">Donate</span>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.05] text-foreground md:text-6xl">
-            Your gift moves people forward — literally.
+            Your gift supports rehabilitation, inclusion and community health.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Every donation becomes therapy hours, a wheelchair fitted, a trained health
-            worker — and ultimately, a life lived more fully.
+            Every donation supports outreach, assistive technology access, training and
+            community health programs.
           </p>
         </Reveal>
       </section>

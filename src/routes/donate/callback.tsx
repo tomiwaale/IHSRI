@@ -14,7 +14,7 @@ const searchSchema = z.object({
 export const Route = createFileRoute("/donate/callback")({
   validateSearch: searchSchema,
   head: () => ({
-    meta: [{ title: "Donation status — IHSRI" }],
+    meta: [{ title: "Donation status - IHESRI" }],
   }),
   component: DonateCallbackPage,
 });

@@ -1,15 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site/SiteShell";
 import { Reveal } from "@/components/site/Reveal";
-import { HandCoins, HeartHandshake, Megaphone, Users } from "lucide-react";
+import { HandCoins, HeartHandshake, Landmark, Users } from "lucide-react";
 
 export const Route = createFileRoute("/get-involved")({
   head: () => ({
     meta: [
-      { title: "Get Involved — IHSRI" },
-      { name: "description", content: "Donate, volunteer, or partner with IHSRI to bring integrated rehabilitation closer to communities." },
-      { property: "og:title", content: "Get Involved with IHSRI" },
-      { property: "og:description", content: "Ways to support our integrated rehabilitation work — donate, volunteer, partner or advocate." },
+      { title: "Get Involved - IHESRI" },
+      { name: "description", content: "Become a volunteer, become a partner, donate, or sponsor a project with IHESRI." },
+      { property: "og:title", content: "Get Involved with IHESRI" },
+      { property: "og:description", content: "Support rehabilitation, disability inclusion and community health through IHESRI." },
     ],
   }),
   component: GetInvolvedPage,
@@ -22,10 +22,10 @@ const tiers = [
 ];
 
 const ways = [
-  { Icon: HandCoins, t: "Donate", d: "One-time gifts directly fund care, devices and training." },
-  { Icon: HeartHandshake, t: "Partner", d: "Co-design programs with us — health systems, NGOs, academic and private sector welcome." },
-  { Icon: Users, t: "Volunteer", d: "Lend clinical, research, communications or operational skills." },
-  { Icon: Megaphone, t: "Advocate", d: "Help us put rehabilitation on the policy agenda where you live." },
+  { Icon: Users, t: "Become a Volunteer", d: "Lend clinical, research, communications or operational skills to community impact work." },
+  { Icon: HeartHandshake, t: "Become a Partner", d: "Work with us on rehabilitation, disability inclusion, health systems and community projects." },
+  { Icon: HandCoins, t: "Donate", d: "Support outreach, assistive technology access, training and community health programs." },
+  { Icon: Landmark, t: "Sponsor a Project", d: "Fund a focused project that brings rehabilitation support closer to underserved communities." },
 ];
 
 function GetInvolvedPage() {
@@ -35,11 +35,11 @@ function GetInvolvedPage() {
         <Reveal className="container-x py-20 md:py-28">
           <span className="eyebrow">Get involved</span>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.05] md:text-6xl text-foreground">
-            Your support moves people forward — literally.
+            Support rehabilitation, inclusion and healthier communities.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Every contribution becomes therapy hours, a wheelchair fitted, a trained
-            health worker — and ultimately, a life lived more fully.
+            Become a volunteer, become a partner, donate, or sponsor a project with
+            IHESRI.
           </p>
         </Reveal>
       </section>
@@ -71,7 +71,7 @@ function GetInvolvedPage() {
           <Reveal>
             <span className="eyebrow">More ways to help</span>
             <h2 className="mt-3 max-w-2xl font-display text-3xl font-semibold text-foreground md:text-4xl">
-              Whatever your role, there's a way to contribute.
+              Choose how you want to get involved.
             </h2>
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">

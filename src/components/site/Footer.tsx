@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Linkedin, Mail } from "lucide-react";
+import { Facebook, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import brand from "@/assets/ihsri-brand.jpeg.asset.json";
 
 export function Footer() {
@@ -17,17 +17,17 @@ export function Footer() {
             />
             <div>
               <div className="font-display text-base font-semibold">
-                Integrated Health Systems &amp; Rehabilitation Initiative
+                Integrated Health Systems and Rehabilitation Initiative
               </div>
               <div className="text-xs uppercase tracking-[0.18em] text-cream/70">
-                Rehabilitation at the core of primary health care
+                Restoring function. Strengthening systems.
               </div>
             </div>
           </div>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-cream/80">
-            We design and implement evidence-based, integrated rehabilitation programs
-            that strengthen health systems and expand equitable access to assistive
-            technologies.
+            IHESRI advances rehabilitation, disability inclusion and community health by
+            strengthening health systems, expanding access to assistive technologies, and
+            inspiring the next generation of rehabilitation professionals.
           </p>
         </div>
 
@@ -49,15 +49,17 @@ export function Footer() {
             Connect
           </h4>
           <ul className="mt-4 space-y-2 text-sm">
-            <li className="flex items-center gap-2"><Mail size={14} /> hello@ihsri.org</li>
-            <li className="flex items-center gap-2"><Facebook size={14} /> Facebook</li>
-            <li className="flex items-center gap-2"><Linkedin size={14} /> LinkedIn</li>
+            <li className="flex items-center gap-2"><Mail size={14} /> integratedhsri@gmail.com</li>
+            <li className="flex items-center gap-2"><Phone size={14} /> +2349138715016</li>
+            <li className="flex items-center gap-2"><MapPin size={14} /> Calabar, Cross River State</li>
+            <li className="flex items-center gap-2"><Facebook size={14} /> Integrated Health Systems And Rehabilitation Initiative</li>
+            <li className="flex items-center gap-2"><Linkedin size={14} /> IHESRI</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-cream/10">
         <div className="container-x flex flex-col items-start justify-between gap-2 py-6 text-xs text-cream/60 md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} Integrated Health Systems &amp; Rehabilitation Initiative. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Integrated Health Systems and Rehabilitation Initiative. All rights reserved.</p>
           <p>Built with care for communities everywhere.</p>
         </div>
       </div>

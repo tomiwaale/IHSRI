@@ -16,10 +16,10 @@ import blessing from "@/assets/team/blessing.jpeg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — IHSRI" },
-      { name: "description", content: "Learn about IHSRI's vision, mission and the values driving integrated rehabilitation in primary health care." },
-      { property: "og:title", content: "About IHSRI" },
-      { property: "og:description", content: "Our story, vision and values — building inclusive rehabilitation into primary health care." },
+      { title: "About - IHESRI" },
+      { name: "description", content: "Learn about IHESRI's story and its work in rehabilitation, disability inclusion, assistive technology and health systems strengthening." },
+      { property: "og:title", content: "About IHESRI" },
+      { property: "og:description", content: "We exist so that rehabilitation is no longer an afterthought." },
     ],
   }),
   component: AboutPage,
@@ -101,14 +101,19 @@ function AboutPage() {
     <SiteShell>
       <section className="bg-secondary">
         <Reveal className="container-x py-20 md:py-28">
-          <span className="eyebrow">About IHSRI</span>
+          <span className="eyebrow">About IHESRI</span>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.05] text-foreground md:text-6xl">
             We exist so that rehabilitation is no longer an afterthought.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Integrated Health Systems &amp; Rehabilitation Initiative is a not-for-profit
-            building practical pathways for rehabilitation to live inside primary health
-            care — where people first seek help, close to home.
+            Integrated Health Systems and Rehabilitation Initiative (IHESRI) is a nonprofit
+            organization founded by a young physiotherapist with a vision to transform
+            healthcare by placing rehabilitation at the center of primary healthcare and
+            community development.
+          </p>
+          <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
+            We believe rehabilitation is not a luxury. It is a fundamental component of
+            quality healthcare.
           </p>
         </Reveal>
       </section>
@@ -118,40 +123,35 @@ function AboutPage() {
           <Reveal direction="left">
             <span className="eyebrow">Our story</span>
             <h2 className="mt-3 font-display text-3xl font-semibold text-foreground md:text-4xl">
-              From clinic corridors to community systems.
+              Born from a simple but powerful realization.
             </h2>
             <div className="mt-6 space-y-4 text-muted-foreground">
               <p>
-                IHSRI was founded by clinicians, researchers, and community advocates who
-                kept meeting the same problem: rehabilitation that arrived too late, too
-                far, or not at all.
+                During clinical training and community engagement, our founder witnessed
+                countless individuals living with preventable disabilities, untreated
+                physical impairments and limited access to rehabilitation services.
               </p>
               <p>
-                We work alongside ministries of health, district teams, and local partners
-                to redesign referral pathways, train multidisciplinary teams, and supply
-                the assistive technologies people need to live full lives.
+                Many communities lacked awareness of rehabilitation, while people who
+                needed prosthetic and orthotic devices often had no access to them.
               </p>
               <p>
-                Our approach is integrated by design — rehabilitation is woven into the
-                fabric of primary health care, not bolted on.
+                Rather than accepting these challenges as normal, IHESRI was established
+                to become part of the solution. Starting as a youth-led initiative driven
+                by passion, service and innovation, IHESRI has grown into a platform
+                dedicated to improving health systems, empowering communities, and creating
+                a future where rehabilitation is accessible to everyone.
               </p>
             </div>
           </Reveal>
           <Reveal direction="right" delay={120} className="rounded-3xl border border-border bg-card p-10 shadow-card">
-            <h3 className="font-display text-xl font-semibold text-foreground">By the numbers</h3>
-            <dl className="mt-6 grid grid-cols-2 gap-6">
-              {[
-                ["12+", "Districts served"],
-                ["3,400", "People reached annually"],
-                ["180", "Health workers trained"],
-                ["28", "Local partners"],
-              ].map(([k, v]) => (
-                <div key={k}>
-                  <dt className="font-display text-3xl font-bold text-primary">{k}</dt>
-                  <dd className="mt-1 text-sm text-muted-foreground">{v}</dd>
-                </div>
-              ))}
-            </dl>
+            <h3 className="font-display text-xl font-semibold text-foreground">Our focus</h3>
+            <p className="mt-4 text-muted-foreground">
+              Through advocacy, community outreach, research, disability inclusion,
+              assistive technology, and health systems strengthening, we work to ensure
+              everyone has the opportunity to live healthier, more independent and
+              dignified lives.
+            </p>
           </Reveal>
         </div>
       </section>

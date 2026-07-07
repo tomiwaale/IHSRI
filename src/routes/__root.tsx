@@ -77,23 +77,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "IHSRI — Integrated Health Systems & Rehabilitation Initiative" },
+      { title: "IHESRI - Integrated Health Systems and Rehabilitation Initiative" },
       {
         name: "description",
         content:
-          "IHSRI embeds rehabilitation at the core of primary health care — building inclusive, community-centered programs that expand access to assistive technologies.",
+          "IHESRI advances rehabilitation, disability inclusion and community health by strengthening health systems, expanding access to assistive technologies, and inspiring rehabilitation professionals.",
       },
-      { name: "author", content: "IHSRI" },
-      { property: "og:title", content: "IHSRI — Integrated Health Systems & Rehabilitation Initiative" },
+      { name: "author", content: "IHESRI" },
+      { property: "og:title", content: "IHESRI - Integrated Health Systems and Rehabilitation Initiative" },
       {
         property: "og:description",
         content:
-          "Rehabilitation at the core of primary health care. Equity, independence, and sustainable development for communities.",
+          "Restoring function. Strengthening systems. Transforming lives.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "IHSRI — Integrated Health Systems & Rehabilitation Initiative" },
-      { name: "twitter:description", content: "Rehabilitation at the core of primary health care. Equity, independence, and sustainable development for communities." },
+      { name: "twitter:title", content: "IHESRI - Integrated Health Systems and Rehabilitation Initiative" },
+      { name: "twitter:description", content: "Restoring function. Strengthening systems. Transforming lives." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1be45056-0e16-49e4-a3f4-7f9b7f3817bd/id-preview-48ce1b7f--c4eea2b7-ab69-4c06-8baa-521d41bdb49a.lovable.app-1781634000863.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1be45056-0e16-49e4-a3f4-7f9b7f3817bd/id-preview-48ce1b7f--c4eea2b7-ab69-4c06-8baa-521d41bdb49a.lovable.app-1781634000863.png" },
     ],

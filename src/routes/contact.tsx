@@ -2,15 +2,15 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteShell } from "@/components/site/SiteShell";
 import { Reveal } from "@/components/site/Reveal";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Facebook, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — IHSRI" },
-      { name: "description", content: "Get in touch with the Integrated Health Systems & Rehabilitation Initiative team." },
-      { property: "og:title", content: "Contact IHSRI" },
-      { property: "og:description", content: "Reach the IHSRI team about partnerships, programs, media or general questions." },
+      { title: "Contact - IHESRI" },
+      { name: "description", content: "Contact Integrated Health Systems and Rehabilitation Initiative by email, phone, LinkedIn or Facebook." },
+      { property: "og:title", content: "Contact IHESRI" },
+      { property: "og:description", content: "Reach the IHESRI team about partnerships, programs, media or general questions." },
     ],
   }),
   component: ContactPage,
@@ -37,9 +37,11 @@ function ContactPage() {
         <div className="container-x grid gap-12 md:grid-cols-5">
           <div className="md:col-span-2 space-y-6">
             {[
-              { Icon: Mail, t: "Email", v: "hello@ihsri.org" },
-              { Icon: Phone, t: "Phone", v: "+000 000 0000" },
-              { Icon: MapPin, t: "Office", v: "Community Health Hub" },
+              { Icon: MapPin, t: "Address", v: "No. 3 Destiny Valley Estate, Calabar, Cross River State." },
+              { Icon: Mail, t: "Email", v: "integratedhsri@gmail.com" },
+              { Icon: Phone, t: "Phone", v: "+2349138715016" },
+              { Icon: Linkedin, t: "LinkedIn", v: "IHESRI" },
+              { Icon: Facebook, t: "Facebook", v: "Integrated Health Systems And Rehabilitation Initiative" },
             ].map(({ Icon, t, v }, i) => (
               <Reveal key={t} direction="left" delay={i * 100} className="group flex gap-4 rounded-2xl border border-border bg-card p-5 transition hover:-translate-y-0.5">
                 <div className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent text-forest transition-transform duration-300 group-hover:scale-110">
