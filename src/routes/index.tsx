@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, HeartPulse, Users, Sparkles, ShieldCheck, GraduationCap, Accessibility, Lightbulb, Megaphone } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
 import { Reveal } from "@/components/site/Reveal";
-import brand from "@/assets/ihsri-brand.jpeg.asset.json";
+import logo from "@/assets/logo.png";
 import heroImg from "@/assets/hero-section.jpg";
 import event01 from "@/assets/gallery/gallery-02.jpeg";
 import event02 from "@/assets/gallery/gallery-06.jpeg";
@@ -84,7 +84,7 @@ function HomePage() {
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-background p-4 shadow-card md:flex md:items-center md:gap-3">
-                <img src={brand.url} alt="" className="h-12 w-12 rounded-full" width={48} height={48} />
+                <img src={logo} alt="IHESRI logo" className="h-12 w-12 rounded-full" width={48} height={48} />
                 <div className="text-left">
                   <div className="font-display text-sm font-semibold text-foreground">Integrated. Inclusive.</div>
                   <div className="text-xs text-muted-foreground">Rehabilitation for dignified lives</div>

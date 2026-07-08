@@ -1,20 +1,36 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Linkedin, Mail, MapPin, Phone } from "lucide-react";
-import brand from "@/assets/ihsri-brand.jpeg.asset.json";
+import logo from "@/assets/logo.png";
+import footerBackground from "@/assets/logo_background.jpeg";
 
 export function Footer() {
   return (
-    <footer className="mt-24 border-t border-border bg-forest text-cream">
-      <div className="container-x grid gap-12 py-16 md:grid-cols-4">
+    <footer className="relative mt-24 overflow-hidden border-t border-border bg-forest text-cream">
+      <img
+        src={footerBackground}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-20"
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-forest/90 via-forest/80 to-forest/95" />
+      <div className="relative container-x grid gap-12 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
-            <img
-              src={brand.url}
-              alt=""
-              className="h-12 w-12 rounded-full object-cover ring-1 ring-cream/20"
-              width={48}
-              height={48}
-            />
+            <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full ring-1 ring-cream/20">
+              <img
+                src={footerBackground}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <img
+                src={logo}
+                alt="IHESRI logo"
+                className="relative z-10 h-8 w-8 rounded-full object-contain"
+                width={32}
+                height={32}
+              />
+            </div>
             <div>
               <div className="font-display text-base font-semibold">
                 Integrated Health Systems and Rehabilitation Initiative
@@ -57,7 +73,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-cream/10">
+      <div className="relative border-t border-cream/10">
         <div className="container-x flex flex-col items-start justify-between gap-2 py-6 text-xs text-cream/60 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Integrated Health Systems and Rehabilitation Initiative. All rights reserved.</p>
           <p>Built with care for communities everywhere.</p>

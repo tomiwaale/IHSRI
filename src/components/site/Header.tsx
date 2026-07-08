@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import brand from "@/assets/ihsri-brand.jpeg.asset.json";
+import logo from "@/assets/logo.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -20,7 +20,7 @@ export function Header() {
       <div className="container-x flex h-16 items-center justify-between">
         <Link to="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
           <img
-            src={brand.url}
+            src={logo}
             alt="IHESRI logo"
             className="h-10 w-10 rounded-full object-cover ring-1 ring-border transition-transform duration-300 group-hover:scale-105"
             width={40}
