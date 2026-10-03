@@ -7,7 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -132,8 +132,43 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="availability-page" aria-hidden="true" inert>
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <Outlet />
+      </div>
+      <AvailabilityNotice />
     </QueryClientProvider>
+  );
+}
+
+function AvailabilityNotice() {
+  const dialogRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    dialogRef.current?.focus();
+  }, []);
+
+  return (
+    <div className="availability-overlay">
+      <div
+        ref={dialogRef}
+        className="availability-dialog"
+        role="alertdialog"
+        aria-modal="true"
+        aria-labelledby="availability-title"
+        aria-describedby="availability-message"
+        tabIndex={-1}
+      >
+        <div className="availability-indicator" aria-hidden="true">
+          !
+        </div>
+        <p className="availability-eyebrow">Temporary service notice</p>
+        <h1 id="availability-title">Website temporarily unavailable</h1>
+        <p id="availability-message">
+          This website has been temporarily restricted because payment has remained outstanding
+          for 90 days. Please contact the site administrator to resolve the issue.
+        </p>
+      </div>
+    </div>
   );
 }
